@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# ⚡️ QuestGenAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 🧠 An **AI-powered quiz generator** that creates, replaces, and expands multiple-choice questions in real time — built with **React (Vite + TypeScript)**, **Express**, and **Groq API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+✨ **AI-Powered Quiz Creation** — Generate intelligent multiple-choice questions from any topic  
+🔄 **Dynamic Replacement** — Instantly replace any question with a new AI-generated one  
+➕ **More Questions Button** — Add fresh questions on demand  
+🎲 **Shuffling System** — Randomized question and answer order each time  
+📊 **Real-Time Scoring** — Track correct answers and total score interactively  
+📤 **Export Options** — Download quizzes as **JSON** or **CSV**  
+🎨 **Modern UI** — Built with **TailwindCSS** for a clean, minimal, and responsive design  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧰 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| 🧩 Layer | 💻 Technology |
+|-----------|----------------|
+| 🎨 **Frontend** | React + Vite + TypeScript |
+| ⚙️ **Backend** | Node.js + Express |
+| 🤖 **AI Engine** | Groq API |
+| 💅 **Styling** | TailwindCSS |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Local Setup Guide
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🖥️ Clone the repo
+```bash
+git clone 
+cd questGenAI
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**### 🧠 Set up the backend**
+cd server
+cp .env.example .env
+# Add your GROQ_API_KEY inside .env
+npm install
+node index.js
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**###💻 Set up the frontend**
+cd ..
+npm install
+npm run dev
+
+**###👨‍💻 Author**
+Kartik Kujala
+ • 💻 [GitHub]([url](https://github.com/LKartikK))
+ • 🌐 Portfolio
+ • 💼 [LinkedIn]([url](https://www.linkedin.com/in/kartikkujala/))
